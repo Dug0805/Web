@@ -1,77 +1,131 @@
 body {
-  background-color: antiquewhite;
-  margin: 0;
-  padding: 0;
+  background-color: #dedede;
 }
-header {
-  background-color: rgb(192, 214, 207);
-  padding: 10px;
-}
+
 h1 {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 40px;
   text-align: center;
-  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 32px;
 }
+
+a {
+  color: #000;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+
+p {
+  font-size: 25px;
+  font-family: Arial, sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  text-align: center;
+}
+
+div img {
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: auto;
+}
+
 div {
   display: inline-block;
+  width: 24%;
+  margin: 5px;
+  padding: 2px;
 }
-p {
-  background-color: aqua;
+@media screen and (min-width: 772px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  div {
+    width: 45vw;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  div img {
+    max-height: 30vh;
+    width: 100%;
+  }
 }
-nav {
-  width: 100%;
-  background-color: aquamarine;
-  /* display: inline-block; */
-  padding: 10px;
+
+@media screen and (min-width: 998px) {
+  div {
+    width: 30vw;
+  }
+}
+
+main {
+  border: 5px #000 solid;
+  margin: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  padding: 5px;
+}
+
+.child {
+  position: relative;
+  display: inline-block;
+  border: 5px black solid;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.label {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+}
+
+.button {
+  display: inline-block;
+  border: 2px solid #000;
+  padding: 5px;
+  border-radius: 25px;
+}
+
+.button:hover {
+  background-color: #fff;
+}
+
+footer {
   display: flex;
-  align-items: center;
   justify-content: center;
 }
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-  width: 50%;
+
+header {
+  border-radius: 5px;
+  border: 5px #000 solid;
+  margin: 10px;
 }
-a {
-  text-decoration: none;
-  margin: 0 10px;
-  color: purple;
+
+.label {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 40%;
 }
-nav li {
-  display: inline;
-  border-bottom: 1px purple;
-}
-.grid {
-  display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6 cột với kích thước bằng nhau */
-    gap: 10px; /* Khoảng cách giữa các hình ảnh */
-    padding: 20px;
-    background-color: rgb(192, 214, 207);
-}
-.grid img {
-  width: 100%;
-  height: auto;
-}
-.flex {
-  display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-    background-color: rgb(192, 214, 207);
-}
-.flex img {
-  width: 100%;
-  height: auto;
-  margin: 5px;
-}
-nav img {
-  width: 30%;
-    margin-left: 10px;
-}
-.current {
-  text-transform: uppercase;
-  background-color: lightgrey;
+
+.child:hover .label {
+  display: block;
 }
